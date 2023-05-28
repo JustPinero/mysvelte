@@ -1,10 +1,17 @@
 <script>
 	export let name;
+
+	let rando
+	$: result = Math.random
+	function setRando(){
+		rando = Math.random();
+	}
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1>HOW ARE YA?! {name}!</h1>
+	<p>{Math.round(rando) ? 'winner': "loser"}</p>
+	<button on:click={setRando}>ROLL THE DICE</button>
 </main>
 
 <style>
@@ -18,7 +25,7 @@
 	h1 {
 		color: #ff3e00;
 		text-transform: uppercase;
-		font-size: 4em;
+		font-size: 10em;
 		font-weight: 100;
 	}
 
