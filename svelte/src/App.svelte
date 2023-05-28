@@ -2,7 +2,7 @@
 	export let name;
 
 	let rando
-	$: result = Math.random
+	
 	function setRando(){
 		rando = Math.random();
 	}
@@ -12,6 +12,7 @@
 	<h1>HOW ARE YA?! {name}!</h1>
 	<p>{Math.round(rando) ? 'winner': "loser"}</p>
 	<button on:click={setRando}>ROLL THE DICE</button>
+	<h5>{rando ? rando: "Click to roll!"}!</h5>
 </main>
 
 <style>
